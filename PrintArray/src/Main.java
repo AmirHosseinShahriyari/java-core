@@ -20,6 +20,11 @@ public class Main {
             System.out.print("Please enter your array length :");
             int arrayLength = scanner.nextInt();
 
+            if(arrayLength == 0){
+                System.out.println("array length most be greater than 0");
+                continue;
+            }
+
             // Get array value and print
             if (arrayType == '1') {
 
