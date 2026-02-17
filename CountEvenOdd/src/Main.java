@@ -23,5 +23,7 @@ public class Main {
                 System.out.println("odd :" + numbers[i]);
             }
         }
+            System.out.println("Program finished.");
+            scanner.close();
     }
 }

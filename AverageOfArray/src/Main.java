@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        while (true) {
+
             // Get array length
             System.out.print("please enter array length :");
             int arrayLength = scanner.nextInt();
@@ -29,6 +29,9 @@ public class Main {
             }
             average /= arrayLength;
             System.out.println("average :" + average);
+
+            System.out.println("Program finished.");
+            scanner.close();
         }
         }
-    }
+

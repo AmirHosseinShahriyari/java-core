@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        while(true) {
+
             // Select array type
             System.out.println("Please select your array type :");
             System.out.println("1.Int");
@@ -20,10 +20,7 @@ public class Main {
             System.out.print("Please enter your array length :");
             int arrayLength = scanner.nextInt();
 
-            if(arrayLength == 0){
-                System.out.println("array length most be greater than 0");
-                continue;
-            }
+
 
             // Get array value and print
             if (arrayType == '1') {
@@ -61,12 +58,10 @@ public class Main {
                 System.out.println();
             }
             }
-            else if(arrayType == 'E'){
-                break;
-            }
             else {
                 System.out.println("please enter your type correctly");
             }
-        }
+        System.out.println("Program finished.");
+        scanner.close();
     }
 }
