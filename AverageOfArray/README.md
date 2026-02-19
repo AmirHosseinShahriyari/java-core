@@ -1,10 +1,10 @@
 ## Goal
-Practice finding the maximum and minimum values in an integer array.
+Practice calculating the average of an integer array.
 
 ## Concepts Used
 - Arrays
 - Loops
-- Enhanced for-loop
+- Methods
 - Basic input validation
 
 ## Purpose

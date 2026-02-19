@@ -4,46 +4,56 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-            // Get array length
-            System.out.print("Please enter array length :");
-            int arrayLength = scanner.nextInt();
+        System.out.print("Please enter array length:");
+        int n = scanner.nextInt();
 
-            int[] numbers = new int[arrayLength];
+        if (n <= 0) {
+            System.out.println("Array length must be greater than 0.");
+            scanner.close();
+            return;
+        }
 
-            // Get array values
-            for (int i = 0; i < arrayLength; i++) {
-                System.out.print("please enter index " + i + " value :");
-                numbers[i] = scanner.nextInt();
-            }
+        int[] numbers = new int[n];
 
-            int[] copyNumbers = new int[arrayLength];
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print("Please enter index " + i + " value:");
+            numbers[i] = scanner.nextInt();
+        }
 
-            // Copy numbers in copyNumbers
-            for (int i = 0; i < arrayLength; i++) {
-                copyNumbers[i] = numbers[i];
-            }
+        int[] copyNumbers = new int[numbers.length];
 
-            // Result
-            System.out.println("Original :");
-            System.out.print("[ ");
-            for (int number : numbers) {
-                System.out.print(number + ",");
-            }
-            System.out.print(" ]");
+        for (int i = 0; i < numbers.length; i++) {
+            copyNumbers[i] = numbers[i];
+        }
 
-            System.out.println();
+        System.out.println();
+        System.out.println("Original:");
+        System.out.print("[ ");
+        for (int i = 0; i < numbers.length; i++) {
+            if (i == numbers.length - 1)
+                System.out.print(numbers[i]);
+            else
+                System.out.print(numbers[i] + ", ");
+        }
+        System.out.print(" ]");
+        System.out.println();
 
-            System.out.println("Copy :");
-            System.out.print("[ ");
-            for (int number : copyNumbers) {
-                System.out.print(number + ",");
-            }
-            System.out.print(" ]");
+        System.out.println();
+
+        System.out.println("Copy:");
+        System.out.print("[ ");
+        for (int i = 0; i < numbers.length; i++) {
+            if (i == numbers.length - 1)
+                System.out.print(copyNumbers[i]);
+            else
+                System.out.print(copyNumbers[i] + ", ");
+        }
+        System.out.print(" ]");
+        System.out.println();
 
         System.out.println("Program finished.");
         scanner.close();
-
-
-
     }
-    }
+
+
+}

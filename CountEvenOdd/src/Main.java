@@ -4,26 +4,30 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Get array length
-        System.out.print("Please enter array length :");
-        int arrayLength = scanner.nextInt();
+        System.out.print("Please enter array length:");
+        int n = scanner.nextInt();
 
-        int[] numbers = new int[arrayLength];
+        if (n <= 0) {
+            System.out.println("Array length must be greater than 0");
+            scanner.close();
+            return;
+        }
 
-        // Get array values
-        for (int i = 0; i < arrayLength; i++) {
-            System.out.print("please enter index " + i + " value :");
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print("Please enter index " + i + " value:");
             numbers[i] = scanner.nextInt();
         }
 
-        for (int i = 0; i < arrayLength; i++){
-            if(numbers[i] % 2 == 0){
-                System.out.println("even :" + numbers[i]);
-            }else{
-                System.out.println("odd :" + numbers[i]);
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                System.out.println("Even: " + numbers[i]);
+            } else {
+                System.out.println("Odd: " + numbers[i]);
             }
         }
-            System.out.println("Program finished.");
-            scanner.close();
+        System.out.println("Program finished.");
+        scanner.close();
     }
 }

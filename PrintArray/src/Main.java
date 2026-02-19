@@ -5,62 +5,61 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
 
-            // Select array type
-            System.out.println("Please select your array type :");
-            System.out.println("1.Int");
-            System.out.println("2.String");
-            System.out.println("enter E to exit");
+        System.out.println("Please select your array type =>");
+        System.out.println("1.Int");
+        System.out.println("2.String");
 
-            char arrayType = scanner.next().charAt(0);
+        char arrayType = scanner.next().charAt(0);
 
-            // Input check
-            if(arrayType == '1' || arrayType == '2'){
+        if (arrayType == '1' || arrayType == '2') {
 
-            // Get array length
-            System.out.print("Please enter your array length :");
-            int arrayLength = scanner.nextInt();
+            System.out.print("Please enter your array length:");
+            int n = scanner.nextInt();
+
+            if (n <= 0) {
+                System.out.println("Array length must be greater than 0");
+                scanner.close();
+                return;
+            }
 
 
-
-            // Get array value and print
             if (arrayType == '1') {
 
-                int[] numbers = new int[arrayLength];
+                int[] numbers = new int[n];
 
-                for (int i = 0; i < arrayLength; i++){
-                    System.out.print("please enter array " + i + " value :");
+                for (int i = 0; i < numbers.length; i++) {
+                    System.out.print("Please enter array " + i + " value :");
                     numbers[i] = scanner.nextInt();
                 }
 
                 System.out.print("Result :");
                 System.out.print("[ ");
-
-                for (int i = 0; i < arrayLength; i++){
+                for (int i = 0; i < numbers.length; i++) {
                     System.out.print(numbers[i] + " ");
                 }
-
                 System.out.print(" ]");
                 System.out.println();
 
-            }
-            else{
-                String[] words = new String[arrayLength];
-                for (int i = 0; i < arrayLength; i++){
-                    System.out.print("please enter array " + i + " value :");
+            } else {
+                String[] words = new String[n];
+
+                for (int i = 0; i < words.length; i++) {
+                    System.out.print("Please enter array " + i + " value :");
                     words[i] = scanner.next();
                 }
+
                 System.out.print("Result :");
                 System.out.print("[ ");
-                for (int i = 0; i < arrayLength; i++){
+                for (int i = 0; i < words.length; i++) {
                     System.out.print(words[i] + " ");
                 }
                 System.out.print(" ]");
                 System.out.println();
             }
-            }
-            else {
-                System.out.println("please enter your type correctly");
-            }
+        } else {
+            System.out.println("Please enter your type correctly");
+        }
+
         System.out.println("Program finished.");
         scanner.close();
     }

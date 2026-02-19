@@ -5,33 +5,32 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
 
-            // Get array length
-            System.out.print("please enter array length :");
-            int arrayLength = scanner.nextInt();
+        System.out.print("Please enter array length:");
+        int n = scanner.nextInt();
 
-            if(arrayLength == 0){
-                System.out.println("array length most be greater than 0");
-                continue;
-            }
-
-            int[] numbers = new int[arrayLength];
-
-            // Get array values
-            for (int i = 0; i < arrayLength; i++) {
-                System.out.print("please enter index " + i + " value :");
-                numbers[i] = scanner.nextInt();
-            }
-
-            // Calculating the average of arrays
-            float average = 0;
-            for (int number : numbers) {
-                average += number;
-            }
-            average /= arrayLength;
-            System.out.println("average :" + average);
-
-            System.out.println("Program finished.");
+        if (n <= 0) {
+            System.out.println("Array length must be greater than 0.");
             scanner.close();
+            return;
         }
+
+        int[] numbers = new int[n];
+
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print("Please enter index " + i + " value:");
+            numbers[i] = scanner.nextInt();
         }
+
+        double average = 0;
+        for (int number : numbers) {
+            average += number;
+        }
+        average /= numbers.length;
+        System.out.println("Average: " + average);
+
+        System.out.println("Program finished.");
+        scanner.close();
+    }
+}
 
