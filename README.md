@@ -9,21 +9,21 @@ It focuses on fundamental concepts, problem-solving, and basic algorithms, servi
 
 The repository is organized by topic, with each folder focusing on a specific core concept:
 
-01-arrays/
+arrays/
 
-02-2d-arrays/
+2d-arrays/
 
-03-strings/
+strings/
 
-04-math/
+math/
 
-05-searching/
+searching/
 
-06-sorting/
+sorting/
 
-07-recursion/
+recursion/
 
-08-problem-solving/
+problem-solving/
 
 ---
 
