@@ -19,6 +19,12 @@ public class Main {
         System.out.print("Please enter array 2 length :");
         n = scanner.nextInt();
 
+        if (n <= 0) {
+            System.out.println("Array length most be greater than 0");
+            scanner.close();
+            return;
+        }
+
         int[] numbers2 = new int[n];
 
 
